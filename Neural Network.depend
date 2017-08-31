@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1494609978 source:c:\users\alex\documents\code\neural network\main.cpp
+	"NeuralNetwork.hpp"
+
+1503585365 c:\users\alex\documents\code\neural network\include\neuralnetwork.hpp
+	"FileManager.hpp"
+	"MainNode.hpp"
+	"Node.hpp"
+	"FileManager.hpp"
+	"Word.hpp"
+	"DataAnalyser.hpp"
+	<vector>
+	<string>
+	<thread>
+	<iostream>
+	<ctime>
+	<random>
+	<mutex>
+
+1494593582 c:\users\alex\documents\code\neural network\include\filemanager.hpp
+	<vector>
+	<fstream>
+	<string>
+	<iostream>
+	"Word.hpp"
+	"Node.hpp"
+
+1494593582 c:\users\alex\documents\code\neural network\include\word.hpp
+	<string>
+
+1504133389 c:\users\alex\documents\code\neural network\include\node.hpp
+	<string>
+	<vector>
+
+1504130328 c:\users\alex\documents\code\neural network\include\mainnode.hpp
+	"Node.hpp"
+	"Word.hpp"
+	<vector>
+	<random>
+
+1503594109 c:\users\alex\documents\code\neural network\include\dataanalyser.hpp
+	<string>
+	<vector>
+	<cctype>
+	"Word.hpp"
+	"MainNode.hpp"
+
+1503594166 source:c:\users\alex\documents\code\neural network\src\filemanager.cpp
+	"FileManager.hpp"
+
+1503729911 source:c:\users\alex\documents\code\neural network\src\node.cpp
+	"Node.hpp"
+
+1494501552 source:c:\users\alex\documents\code\neural network\src\word.cpp
+	"Word.hpp"
+
+1504133674 source:c:\users\alex\documents\code\neural network\src\dataanalyser.cpp
+	"DataAnalyser.hpp"
+
+1504130306 source:c:\users\alex\documents\code\neural network\src\mainnode.cpp
+	"MainNode.hpp"
+
+1504133711 source:c:\users\alex\documents\code\neural network\src\neuralnetwork.cpp
+	"NeuralNetwork.hpp"
+
