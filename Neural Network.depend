@@ -63,3 +63,67 @@
 1504133711 source:c:\users\alex\documents\code\neural network\src\neuralnetwork.cpp
 	"NeuralNetwork.hpp"
 
+1504191099 source:c:\users\alex\documents\code\neuralnetwork\main.cpp
+	"NeuralNetwork.hpp"
+
+1504191099 c:\users\alex\documents\code\neuralnetwork\include\neuralnetwork.hpp
+	"FileManager.hpp"
+	"MainNode.hpp"
+	"Node.hpp"
+	"FileManager.hpp"
+	"Word.hpp"
+	"DataAnalyser.hpp"
+	<vector>
+	<string>
+	<thread>
+	<iostream>
+	<ctime>
+	<random>
+	<mutex>
+
+1504191099 c:\users\alex\documents\code\neuralnetwork\include\filemanager.hpp
+	<vector>
+	<fstream>
+	<string>
+	<iostream>
+	"Word.hpp"
+	"Node.hpp"
+
+1504191099 c:\users\alex\documents\code\neuralnetwork\include\word.hpp
+	<string>
+
+1504191099 c:\users\alex\documents\code\neuralnetwork\include\node.hpp
+	<string>
+	<vector>
+
+1504191099 c:\users\alex\documents\code\neuralnetwork\include\mainnode.hpp
+	"Node.hpp"
+	"Word.hpp"
+	<vector>
+	<random>
+
+1504191099 c:\users\alex\documents\code\neuralnetwork\include\dataanalyser.hpp
+	<string>
+	<vector>
+	<cctype>
+	"Word.hpp"
+	"MainNode.hpp"
+
+1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\dataanalyser.cpp
+	"DataAnalyser.hpp"
+
+1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\filemanager.cpp
+	"FileManager.hpp"
+
+1504606289 source:c:\users\alex\documents\code\neuralnetwork\src\mainnode.cpp
+	"MainNode.hpp"
+
+1504606993 source:c:\users\alex\documents\code\neuralnetwork\src\neuralnetwork.cpp
+	"NeuralNetwork.hpp"
+
+1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\node.cpp
+	"Node.hpp"
+
+1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\word.cpp
+	"Word.hpp"
+

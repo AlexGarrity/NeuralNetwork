@@ -30,7 +30,7 @@ short MainNode::NextWord()
                 }
             }
         }
-        minimumConnection -= 5;
+        minimumConnection -= 1;
     }
     return weights[rand()%5];
 }

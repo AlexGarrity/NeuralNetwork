@@ -22,6 +22,10 @@ void NeuralNetwork::GenerateNodes()
 
 void NeuralNetwork::GenerateSubNodes(unsigned int startPoint, unsigned int endPoint)
 {
+    if (endPoint > nodeMap.size() - 1) {
+        endPoint = nodeMap.size() - 1;
+        startPoint = 0;
+    }
     //Mutex.lock();
     for (unsigned int i = startPoint; i < endPoint; i++)
     {
@@ -91,18 +95,18 @@ void NeuralNetwork::Start()
     unsigned int threadCount = std::thread::hardware_concurrency();
     std::cout << "\n" << threadCount << " threads found, splitting workload accordingly..." << std::endl;
     time(&startTime);
-    std::vector<std::thread> threads;
+    GenerateSubNodes(0,10370);
+    /*std::vector<std::thread> threads;
     unsigned int threadInterval = 10000 / threadCount;
     for (unsigned int i = 0; i < threadCount; i++)
     {
         unsigned int lowerLimit = i * threadInterval;
         unsigned int upperLimit = ((i + 1) * threadInterval - 1);
-        std::thread t(GenerateSubNodes, lowerLimit, upperLimit)
-        threads.push_back(t);
+        threads.at(i) = std::thread(&GenerateSubNodes, lowerLimit, upperLimit);
     }
-    for (unsigned int i = 0; i < threadCount; i++) {
-        threads[i].join();
-    }
+    for (auto &t : threads) {
+        t.join();
+    }*/
     time(&endTime);
     std::cout << "Generated " << nodeMap.size() * nodeMap.size() << " subnodes in " << difftime(endTime, startTime) << " seconds." << std::endl;
     std::vector<std::string> trainingData;
