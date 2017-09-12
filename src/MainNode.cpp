@@ -54,7 +54,7 @@ short MainNode::NextWord()
     }
     else
     {
-        return rand() % 9998 + 1;
+        return rand() % 10000;
     }
 }
 
@@ -64,7 +64,8 @@ void MainNode::GenerateSubNodes(std::vector<Word> & wList)
     for (unsigned int i = 0; i < wordList.size() -1; i++)
     {
         weightMap.push_back(Node(i));
-        for (int j = 0; j < rand() % 10; j++) {
+        for (int j = 0; j < rand() % 10; j++)
+        {
             IncreaseWeight(i);
         }
     }

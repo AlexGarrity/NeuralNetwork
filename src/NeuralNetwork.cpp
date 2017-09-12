@@ -27,16 +27,26 @@ void NeuralNetwork::GenerateSubNodes(unsigned int startPoint, unsigned int endPo
         endPoint = nodeMap.size() - 1;
         startPoint = 0;
     }
-    Mutex.lock();
+    //Mutex.lock();
     for (unsigned int i = startPoint; i < endPoint; i++)
     {
         nodeMap[i].GenerateSubNodes(wordList);
     }
-    Mutex.unlock();
+    //Mutex.unlock();
 }
 
-void NeuralNetwork::SentenceInput(std::vector<std::string> &sentence) {
-
+void NeuralNetwork::SentenceInput(std::vector<std::string> &sentence)
+{
+    std::cout << "Is this sentence acceptable? (y/n)" << std::endl;
+    std::string userInput;
+    std::cin >> userInput;
+    if (userInput == "y") {
+        dAnalyser.AddData(sentence, nodeMap, wordList);
+    } else if (userInput == "n") {
+        //Decrease weights
+    } else {
+        //Invalid input, ignore
+    }
 }
 
 std::vector<std::string> NeuralNetwork::GenerateSentence()
@@ -44,10 +54,8 @@ std::vector<std::string> NeuralNetwork::GenerateSentence()
     short length = 0;
     short currentWord = rand() % 10000;
     std::vector<std::string> sentence;
-    std::cout << "\nGenerating a sentence..." << std::endl;
     sentence.push_back(wordList[currentWord].word);
-    unsigned char sentenceLength = rand() % 9;
-    std::cout << sentence.size() << " is the sentence size" << std::endl;
+    unsigned short sentenceLength = rand() % 8 + 1;
     while (sentence.size() < sentenceLength)
     {
         currentWord = nodeMap[currentWord].NextWord();
@@ -65,11 +73,22 @@ std::vector<std::string> NeuralNetwork::GenerateSentence()
     return sentence;
 }
 
-void NeuralNetwork::GenerateSentences() {
+void NeuralNetwork::GenerateSentences()
+{
     bool exit = false;
-    while (exit == false) {
+    while (exit == false)
+    {
         std::vector<std::string> sentence = GenerateSentence();
-        SentenceInput(sentence);
+        for (unsigned int i = 0; i < sentence.size(); i++)
+        {
+            std::cout << sentence[i];
+            std::cout << " ";
+        }
+        std::endl(std::cout);
+        if (sentence.size() > 1) {
+            SentenceInput(sentence);
+        }
+        std::endl(std::cout);
     }
 }
 
@@ -94,8 +113,10 @@ void NeuralNetwork::Start()
     unsigned int threadCount = std::thread::hardware_concurrency();
 
     /** I don't think this actually decreases the time taken to create all the sub nodes **/
+    /** This is no longer true, performance gain is roughly 2x **/
     std::cout << "\n" << threadCount << " threads found, splitting workload accordingly..." << std::endl;
     time(&startTime);
+
     std::vector<std::thread> threads;
     unsigned int threadInterval = 10000 / threadCount;
     for (unsigned int i = 0; i < threadCount; i++)
@@ -104,7 +125,8 @@ void NeuralNetwork::Start()
         unsigned int upperLimit = ((i + 1) * threadInterval - 1);
         threads.push_back(std::thread(GenerateSubNodes, this, lowerLimit, upperLimit));
     }
-    for (unsigned int i = 0; i < threadCount; i++) {
+    for (unsigned int i = 0; i < threadCount; i++)
+    {
         threads.at(i).join();
     }
     time(&endTime);
