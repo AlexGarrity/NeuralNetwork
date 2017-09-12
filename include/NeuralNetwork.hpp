@@ -24,6 +24,8 @@ public:
 
     void Start();
 
+    void GenerateSubNodes(unsigned int s, unsigned int e);
+
 protected:
 
 
@@ -38,9 +40,11 @@ private:
 
     bool InputMenu();
     void GenerateNodes();
-    void GenerateSubNodes(unsigned int s, unsigned int e);
+
     void TakeData();
-    void GenerateSentence();
+    std::vector<std::string> GenerateSentence();
+    void GenerateSentences();
+    void SentenceInput(std::vector<std::string> &sentence);
 };
 
 #endif // NEURALNETWORK_HPP

@@ -63,10 +63,10 @@
 1504133711 source:c:\users\alex\documents\code\neural network\src\neuralnetwork.cpp
 	"NeuralNetwork.hpp"
 
-1504191099 source:c:\users\alex\documents\code\neuralnetwork\main.cpp
+1504624391 source:c:\users\alex\documents\code\neuralnetwork\main.cpp
 	"NeuralNetwork.hpp"
 
-1504191099 c:\users\alex\documents\code\neuralnetwork\include\neuralnetwork.hpp
+1505212632 c:\users\alex\documents\code\neuralnetwork\include\neuralnetwork.hpp
 	"FileManager.hpp"
 	"MainNode.hpp"
 	"Node.hpp"
@@ -92,7 +92,7 @@
 1504191099 c:\users\alex\documents\code\neuralnetwork\include\word.hpp
 	<string>
 
-1504191099 c:\users\alex\documents\code\neuralnetwork\include\node.hpp
+1505210396 c:\users\alex\documents\code\neuralnetwork\include\node.hpp
 	<string>
 	<vector>
 
@@ -115,13 +115,13 @@
 1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\filemanager.cpp
 	"FileManager.hpp"
 
-1504606289 source:c:\users\alex\documents\code\neuralnetwork\src\mainnode.cpp
+1505210468 source:c:\users\alex\documents\code\neuralnetwork\src\mainnode.cpp
 	"MainNode.hpp"
 
-1504606993 source:c:\users\alex\documents\code\neuralnetwork\src\neuralnetwork.cpp
+1505214280 source:c:\users\alex\documents\code\neuralnetwork\src\neuralnetwork.cpp
 	"NeuralNetwork.hpp"
 
-1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\node.cpp
+1505210388 source:c:\users\alex\documents\code\neuralnetwork\src\node.cpp
 	"Node.hpp"
 
 1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\word.cpp
