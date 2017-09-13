@@ -15,6 +15,10 @@ void Node::AddWeight()
     weight += 1;
 }
 
+void Node::RemoveWeight() {
+    weight -= 1;
+}
+
 short Node::GetIndex()
 {
     return index;

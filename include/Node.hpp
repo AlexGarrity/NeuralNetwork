@@ -11,6 +11,7 @@ public:
     virtual ~Node();
 
     void AddWeight();
+    void RemoveWeight();
     short GetIndex();
     short GetWeight();
 

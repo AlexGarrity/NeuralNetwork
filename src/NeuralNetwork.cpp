@@ -43,16 +43,16 @@ void NeuralNetwork::SentenceInput(std::vector<std::string> &sentence)
     if (userInput == "y") {
         dAnalyser.AddData(sentence, nodeMap, wordList);
     } else if (userInput == "n") {
-        //Decrease weights
+        dAnalyser.RemoveData(sentence, nodeMap, wordList);
     } else {
-        //Invalid input, ignore
+        std::cout << "Input not valid, discounting data" << std::endl;
     }
 }
 
 std::vector<std::string> NeuralNetwork::GenerateSentence()
 {
     short length = 0;
-    short currentWord = rand() % 10000;
+    short currentWord = 0;
     std::vector<std::string> sentence;
     sentence.push_back(wordList[currentWord].word);
     unsigned short sentenceLength = rand() % 8 + 1;

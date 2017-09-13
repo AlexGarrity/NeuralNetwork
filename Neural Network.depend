@@ -92,36 +92,36 @@
 1504191099 c:\users\alex\documents\code\neuralnetwork\include\word.hpp
 	<string>
 
-1505210396 c:\users\alex\documents\code\neuralnetwork\include\node.hpp
+1505293551 c:\users\alex\documents\code\neuralnetwork\include\node.hpp
 	<string>
 	<vector>
 
-1504191099 c:\users\alex\documents\code\neuralnetwork\include\mainnode.hpp
+1505293454 c:\users\alex\documents\code\neuralnetwork\include\mainnode.hpp
 	"Node.hpp"
 	"Word.hpp"
 	<vector>
 	<random>
 
-1504191099 c:\users\alex\documents\code\neuralnetwork\include\dataanalyser.hpp
+1505293668 c:\users\alex\documents\code\neuralnetwork\include\dataanalyser.hpp
 	<string>
 	<vector>
 	<cctype>
 	"Word.hpp"
 	"MainNode.hpp"
 
-1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\dataanalyser.cpp
+1505293429 source:c:\users\alex\documents\code\neuralnetwork\src\dataanalyser.cpp
 	"DataAnalyser.hpp"
 
 1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\filemanager.cpp
 	"FileManager.hpp"
 
-1505222112 source:c:\users\alex\documents\code\neuralnetwork\src\mainnode.cpp
+1505293879 source:c:\users\alex\documents\code\neuralnetwork\src\mainnode.cpp
 	"MainNode.hpp"
 
-1505222549 source:c:\users\alex\documents\code\neuralnetwork\src\neuralnetwork.cpp
+1505293959 source:c:\users\alex\documents\code\neuralnetwork\src\neuralnetwork.cpp
 	"NeuralNetwork.hpp"
 
-1505210388 source:c:\users\alex\documents\code\neuralnetwork\src\node.cpp
+1505293706 source:c:\users\alex\documents\code\neuralnetwork\src\node.cpp
 	"Node.hpp"
 
 1504191099 source:c:\users\alex\documents\code\neuralnetwork\src\word.cpp

@@ -11,6 +11,13 @@ void MainNode::IncreaseWeight(short index)
     connections ++;
 }
 
+void MainNode::DecreaseWeight(short index) {
+    if (weightMap[index].GetWeight() != 0) {
+        weightMap[index].RemoveWeight();
+        connections --;
+    }
+}
+
 short MainNode::NextWord()
 {
     float minimumConnection = 100;
@@ -54,7 +61,7 @@ short MainNode::NextWord()
     }
     else
     {
-        return rand() % 10000;
+        return -1;
     }
 }
 

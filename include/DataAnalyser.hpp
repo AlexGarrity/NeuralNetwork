@@ -16,6 +16,7 @@ public:
     virtual ~DataAnalyser();
 
     void AddData(std::vector<std::string> & trainingData, std::vector<MainNode> & nodeMap, std::vector<Word> & wordList);
+    void RemoveData(std::vector<std::string> & trainingData, std::vector<MainNode> & nodeMap, std::vector<Word> & wordlist);
 
 protected:
 

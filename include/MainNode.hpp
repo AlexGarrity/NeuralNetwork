@@ -13,6 +13,7 @@ public:
     MainNode(short i);
 
     void IncreaseWeight(short index);
+    void DecreaseWeight(short index);
     void GenerateSubNodes(std::vector<Word> & wordList);
     short NextWord();
 

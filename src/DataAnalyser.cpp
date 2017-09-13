@@ -56,3 +56,30 @@ void DataAnalyser::AddData(std::vector<std::string> & trainingData, std::vector<
         nodeMap[prevWordIndex].IncreaseWeight(wordIndex);
     }
 }
+
+
+void DataAnalyser::RemoveData(std::vector<std::string> & trainingData, std::vector<MainNode> & nodeMap, std::vector<Word> & wordList)
+{
+    short prevWordIndex = 0;
+    short wordIndex = 0;
+    for (unsigned int i = 1; i < trainingData.size(); i++)
+    {
+        for (unsigned int j = 0; j < wordList.size(); j++)
+        {
+            if (wordList[j].word == trainingData[i-1])
+            {
+                prevWordIndex = j;
+                break;
+            }
+        }
+        for (unsigned int j = 0; j < wordList.size(); j++)
+        {
+            if (wordList[j].word == trainingData[i])
+            {
+                wordIndex = j;
+                break;
+            }
+        }
+        nodeMap[prevWordIndex].DecreaseWeight(wordIndex);
+    }
+}
